@@ -9,6 +9,7 @@ public class UserLogin {
 	private String senha;
 
 	private String token;
+	
 
 	public String getNome() {
 		return nome;
