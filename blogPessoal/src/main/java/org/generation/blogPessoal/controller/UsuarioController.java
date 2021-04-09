@@ -41,9 +41,9 @@ public class UsuarioController {
 	}
 
 	@PostMapping("/cadastrar")
-	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
+	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuarios) {
 
-		Optional<Usuario> user = usuarioService.CadastrarUsuario(usuario);
+		Optional<Usuario> user = usuarioService.CadastrarUsuario(usuarios);
 
 		try {
 			return ResponseEntity.ok(user.get());
