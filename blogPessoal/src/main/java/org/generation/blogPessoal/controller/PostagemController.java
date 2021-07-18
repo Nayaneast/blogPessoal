@@ -41,11 +41,12 @@ public class PostagemController {
 		return ResponseEntity.ok(repositoty.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
-	@PostMapping ResponseEntity<Postagem> post (@RequestBody Postagem postagem){
+	@PostMapping 
+	public ResponseEntity<Postagem> post(@RequestBody Postagem postagem){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repositoty.save(postagem));
 	}
 	
-	@PutMapping ResponseEntity<Postagem> put (@RequestBody Postagem postagem){
+	@PutMapping ResponseEntity<Postagem> put(@RequestBody Postagem postagem){
 		return ResponseEntity.status(HttpStatus.OK).body(repositoty.save(postagem));
 	}
 	
